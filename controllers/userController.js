@@ -16,13 +16,13 @@ module.exports = {
       throw error;
     }
   },
- 
+
   getRecord: async (req, res) => {
     try {
       let result = await Models.userModel.findAll();
       return res.send(result);
     } catch (error) {
-      console.log(error); 
+      console.log(error);
       throw error;
     }
   },
@@ -66,7 +66,7 @@ module.exports = {
       await Models.userModel.destroy({ where: { id: req.body.id } });
     } catch (error) {
       console.log(error);
-      throw error; 
+      throw error;
     }
   },
 };
